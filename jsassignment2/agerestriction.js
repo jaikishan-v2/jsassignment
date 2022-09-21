@@ -1,22 +1,23 @@
-var employee = {
+let employee = {
     name : "Coder",
     role : "Trainee",
+    location : "Blr",
     age : 25,
-    location : "Bangalore",
 };
-Object.defineProperty(employee, 'age',{
 
-    set: function (age) {
-        if (age < 65 && age > 17) {
-            age = age;
-        } else {
-            throw 'Invalid age';
+Object.defineProperty(employee, 'age', {
+    set : function (value) {
+        
+        if (value > 65 || value < 17) {
+            throw 'INVALID AGE'
         }
-    }
+        else{
+            {age : value};
+        }
+    },
+    
 });
-employee.age = 26;
 
-/* Write a code to sort this array */ 
-var a = [4,8,15,16,23,12];
-sorted = a.sort(function (a,b) {return a-b });
-console.log(sorted);
+employee.age = 45;
+
+console.log(employee.age)

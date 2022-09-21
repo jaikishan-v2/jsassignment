@@ -192,3 +192,8 @@ var square = twice(mul);
 
 console.log(compose(double, square)(3));
 console.log('\t');
+
+/* Write a code to sort this array */ 
+var a = [4,8,15,16,23,12];
+sorted = a.sort(function (a,b) {return a-b });
+console.log(sorted);
