@@ -13,14 +13,16 @@ function test(name, age) {
                 throw 'INVALID AGE'
             }
             else {
-                age = value;
-                name = { name, age }
+                this.age = value;
             }
         },
 
     });
 }
 
-var emp1 = new Employee('jai', 'trainee', 80, 'bangalore');
+var emp1 = new Employee('jai', 'trainee', 40, 'bangalore');
+console.log(emp1.age);
+emp1.age = 50;
 test(emp1, emp1.age);
+console.log(emp1.age);
 

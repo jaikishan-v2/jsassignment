@@ -1,23 +1,40 @@
-let employee = {
-    name : "Coder",
-    role : "Trainee",
-    location : "Blr",
-    age : 25,
-};
+function Employee (name, role, location, age) {
 
-Object.defineProperty(employee, 'age', {
-    set : function (value) {
+    let empAge = age
+    const emp = {
+        name : name,
+        role : role,
+        location : location,
+    }
+
+    Object.defineProperty(emp, 'age', {
+        set: function (value) {
+            if (value > 65 || value < 17) {
+                throw 'INVALID AGE';
+            }
+            empAge = value;
+        },
+
+        get: function() {
+            return empAge;
+        },
         
-        if (value > 65 || value < 17) {
-            throw 'INVALID AGE'
-        }
-        else{
-            {age : value};
-        }
-    },
+    });
+    return emp;
+}
     
-});
+employee = Employee();
 
+employee1 = Employee();
+
+employee.name = 'coder';
+employee.role = 'trainee';
+employee.location = 'blr'; 
 employee.age = 45;
 
-console.log(employee.age)
+employee.age = 35;
+
+employee1.age = 40;
+
+
+console.log(employee.role, employee.age);

@@ -28,7 +28,7 @@ function Stack(num) {
 let Stack1 = Stack(20);
 Stack1.push("item 0");
 Stack1.push("item 1");
-Stack1.pop()
+Stack1.pop();
 
 
 
